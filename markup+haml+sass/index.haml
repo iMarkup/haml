@@ -1,0 +1,116 @@
+!!!
+%html
+	%head
+		%meta{:charset => "utf-8"}/
+		%meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+		%title SwimTopia
+		%link{:href => "css/all.css", :media => "all", :rel => "stylesheet"}/
+	%body
+		#wrapper
+			= Haml::Engine.new(File.read('./includes/header.haml')).render
+			.container
+				%section.item
+					%h1 Page Title
+					.columns
+						.col
+							%img{:src => "images/img-1.jpg", :alt => "image description"}/
+						.col
+							.box
+								%a{:href => "#"}
+									%img{:src => "images/img-2.jpg", :alt => "image description"}/
+							.box
+								%a{:href => "#"}
+									%img{:src => "images/img-3.jpg", :alt => "image description"}/
+							.social
+								%span.text Share This:
+								%ul
+									%li
+										%a{:href => "#"}
+											%i.ico.icon-facebook
+									%li
+										%a{:href => "#"}
+											%i.ico.icon-twitter
+									%li
+										%a{:href => "#"}
+											%i.ico.icon-youtube
+				%section.item
+					.content-area
+						%span.text [content area]
+				%section.item
+					.columns-1
+						.col
+							%h2 Latest Tweets
+							.placeholder
+								%img{:src => "images/placeholder.jpg", :alt => "image description"}/
+						.col
+							%h2 News & Views
+							.block-post
+								.post
+									.visual
+										%a{:href => "#"}
+											%img{:src => "images/img-4.jpg", :alt => "image description"}/
+									.post-body
+										.title
+											%h3
+												%a{:href => "#"} football
+											%time{:datetime => "2015-05-16"} 05/16/15
+										%p A descriptive blog post title that describes what the post is about so that they click to read the article
+										.social
+											%ul
+												%li
+													%a{:href => "#"}
+														%i.ico.icon-facebook
+												%li
+													%a{:href => "#"}
+														%i.ico.icon-twitter
+												%li
+													%a{:href => "#"}
+														%i.ico.icon-youtube
+								.post
+									.visual
+										%a{:href => "#"}
+											%img{:src => "images/img-5.jpg", :alt => "image description"}/
+									.post-body
+										.title
+											%h3
+												%a{:href => "#"} basketball
+											%time{:datetime => "2015-05-16"} 05/16/15
+										%p A descriptive blog post title that describes what the post is about so that they click to read the article
+										.social
+											%ul
+												%li
+													%a{:href => "#"}
+														%i.ico.icon-facebook
+												%li
+													%a{:href => "#"}
+														%i.ico.icon-twitter
+												%li
+													%a{:href => "#"}
+														%i.ico.icon-youtube
+								.post
+									.visual
+										%a{:href => "#"}
+											%img{:src => "images/img-4.jpg", :alt => "image description"}/
+									.post-body
+										.title
+											%h3
+												%a{:href => "#"} news
+											%time{:datetime => "2015-05-16"} 05/16/15
+										%p A descriptive blog post title that describes what the post is about so that they click to read the article
+										.social
+											%ul
+												%li
+													%a{:href => "#"}
+														%i.ico.icon-facebook
+												%li
+													%a{:href => "#"}
+														%i.ico.icon-twitter
+												%li
+													%a{:href => "#"}
+														%i.ico.icon-youtube
+				%section.item
+					= Haml::Engine.new(File.read('./includes/gallery.haml')).render
+			= Haml::Engine.new(File.read('./includes/footer.haml')).render
+		%script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js", :type => "text/javascript"}
+		%script{:type => "text/javascript"} window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')
+		%script{:src => "js/jquery.main.js", :type => "text/javascript"}
